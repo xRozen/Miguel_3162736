@@ -15,7 +15,7 @@ function mostrarMenu() {
     for (var i = 0; i < productos.length; i++) {
         menu += (i + 1) + ". " + productos[i].nombre + " - $" + productos[i].precio + "\n";
     }
-    menu += (productos.length + 1) + ". Agregar un producto a la lista de productos\n";
+    menu += (productos.length + 1) + ". Agregar un producto a la lista\n";
     menu += (productos.length + 2) + ". Ver Carrito y Total\n";
     menu += (productos.length + 3) + ". Salir\n";
     return menu;
@@ -28,16 +28,25 @@ function agregarAlCarrito(index) {
     console.log('Producto "' + productoSeleccionado.nombre + '" agregado al carrito.');
 }
 
-//funcion para agregar un producto a la lista de productos
+//funcion para agregar un producto a la lista
 function agregarProducto() {
-    var nombreP = prompt("Ingresa el nombre del producto que desea agregar: ");
-    var precioP = parseInt(prompt("Ingresa el precio del producto: "));
-    if(nombreP != null && precioP != null){
-        productos.push({nombre: nombreP, precio: precioP});
-    } else {
-        alert("Ese no es un nombre ni precio adecuados, vuelve a intentarlo.");
-    }
+    var nombreP, precioP;
+
+    // Repetir hasta obtener un nombre y precio válidos
+    do {
+        nombreP = prompt("Ingresa el nombre del producto que desea agregar: ");
+        precioP = parseInt(prompt("Ingresa el precio del producto: "));
+
+        if (!nombreP || isNaN(precioP)) {
+            alert("El nombre o precio proporcionado no son válidos. Inténtalo de nuevo.");
+        }
+    } while (!nombreP || isNaN(precioP));
+
+    // Agregar el producto a la lista si pasa las validaciones
+    productos.push({ nombre: nombreP, precio: precioP });
+    alert(`Producto "${nombreP}" agregado con éxito a la lista.`);
 }
+
 
 //funcion para mostrar el carrito y el total
 function mostrarCarritoYTotal() {
