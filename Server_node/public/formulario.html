@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Miguel Angel Lopez Rodea</h1>
+    </header>
+    <div class="content">
+        <h2>Formulario</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br>
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" required><br>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required><br>
+            
+            <label for="cuenta">Número de cuenta:</label>
+            <input type="text" id="cuenta" name="cuenta" pattern="\d{9}" required><br>
+            
+            <label for="escuela">Escuela:</label>
+            <input type="text" id="escuela" name="escuela" required><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <footer>
+        <a href="https://www.aragon.unam.mx" target="_blank">Sitio Web FES Aragón</a>
+    </footer>
+</body>
+</html>
