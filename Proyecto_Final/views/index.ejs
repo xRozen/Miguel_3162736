@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilioteca Arkhé</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Catálogo de Libros</h1>
+        <a href="/agregar" class="boton boton-agregar">Agregar Nuevo Libro</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Género</th>
+                    <th>Editorial</th>
+                    <th>Año</th>
+                    <th>ISBN</th>
+                    <th>Cantidad</th>
+                    <th>Ubicación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% libros.forEach(function(libro) { %>
+                    <tr>
+                        <td><%= libro.id_libro %></td>
+                        <td><%= libro.titulo %></td>
+                        <td><%= libro.autor %></td>
+                        <td><%= libro.genero %></td>
+                        <td><%= libro.editorial %></td>
+                        <td><%= libro.año %></td>
+                        <td><%= libro.isbn %></td>
+                        <td><%= libro.cantidad %></td>
+                        <td><%= libro.ubicacion %></td>
+                        <td>
+                            <a href="/editar/<%= libro.id_libro %>" class="boton boton-editar">Editar</a>
+                            <a href="/eliminar/<%= libro.id_libro %>" class="boton boton-eliminar" onclick="return confirm('¿Esta seguro de eliminar este libro?')">Eliminar</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
