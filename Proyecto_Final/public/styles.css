@@ -1,26 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
     margin: 0;
     padding: 20px;
     line-height: 1.6;
-    color: #333;
+    color: #0c0c0c;
 }
 
 .container {
-    background-color: white;
+    background-color: #f2f2f2;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 90%;
     margin: 20px auto;
     overflow-x: auto;
 }
 
 h1 {
-    text-align: center;
-    color: #000000;
-    font-weight: 700;
+    text-align: left;
+    color: #0c0c0c;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-bottom: 2px solid #0c0c0c;
+    padding-bottom: 10px;
 }
 
 table {
@@ -31,7 +32,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 2px solid #0c0c0c;
 }
 
 th, td {
@@ -40,17 +41,17 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #ffbd17;
     font-weight: bold;
     text-align: center;
-    color: #555;
+    color: #0c0c0c;
 }
 
 .boton {
     display: inline-block;
     padding: 8px 12px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 5px 2px;
     font-size: 0.9em;
     text-align: center;
@@ -62,22 +63,32 @@ th {
 }
 
 .boton-agregar {
-    background-color: #4CAF50;
+    background-color: #1da849;
     color: white;
 }
 
 .boton-agregar:hover {
-    background-color: #45a049;
+    background-color: #167c36;
 }
 
-.boton-editar {
-    background-color: #2196F3;
+.boton-editar1 {
+    background-color: #1973c0;
     color: white;
     
 }
 
-.boton-editar:hover {
-    background-color: #1e87dc;
+.boton-editar1:hover {
+    background-color: #155fa0;
+}
+
+.boton-editar2 {
+    background-color: #1da849;
+    color: white;
+    
+}
+
+.boton-editar2:hover {
+    background-color: #167c36;
 }
 
 .boton-eliminar {
@@ -94,8 +105,8 @@ form div {
 }
 
 form label {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     display: block;
     margin-bottom: 5px;
 }
@@ -103,6 +114,8 @@ form label {
 form input {
     width: 100%;
     padding: 8px;
+    border-radius: 15px;
+    font-size: 1em;
     box-sizing: border-box;
 }
 
@@ -114,6 +127,38 @@ form input {
     margin-bottom: 15px;
     border-radius: 5px;
     font-weight: bold;
+}
+
+.titulo {
+    border: 3px solid #ef4b3c;
+}
+
+.autor {
+    border: 3px solid #ffbd17;
+}
+
+.genero {
+    border: 3px solid #1973c0;
+}
+
+.editorial {
+    border: 3px solid #1da849;
+}
+
+.año {
+    border: 3px solid #ef4b3c;
+}
+
+.isbn {
+    border: 3px solid #ffbd17;
+}
+
+.cantidad {
+    border: 3px solid #1973c0;
+}
+
+.ubicacion {
+    border: 3px solid #1da849;
 }
 
 /* Responsividad */

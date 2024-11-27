@@ -7,45 +7,45 @@
 </head>
 <body>
     <div class="container">
-        <h1>Editar Libro</h1>
+        <h1>EDITAR LIBRO</h1>
         <% if (locals.error) { %>
             <div class="error"><%= error %></div>
         <% } %>
         <form action="/editar/<%= libro.id_libro %>" method="POST">
             <div>
                 <label>Título:</label>
-                <input type="text" name="titulo" value="<%= libro.titulo %>" required>
+                <input type="text" class="titulo" name="titulo" value="<%= libro.titulo %>" required>
             </div>
             <div>
                 <label>Autor:</label>
-                <input type="text" name="autor" value="<%= libro.autor %>" required>
+                <input type="text" class="autor" name="autor" value="<%= libro.autor %>" required>
             </div>
             <div>
                 <label>Género:</label>
-                <input type="text" name="genero" value="<%= libro.genero %>" required>
+                <input type="text" class="genero" name="genero" value="<%= libro.genero %>" required>
             </div>
             <div>
                 <label>Editorial:</label>
-                <input type="text" name="editorial" value="<%= libro.editorial %>" required>
+                <input type="text" class="editorial" name="editorial" value="<%= libro.editorial %>" required>
             </div>
             <div>
                 <label>Año:</label>
-                <input type="number" name="año" value="<%= libro.año %>" required min="1000" max="2024">
+                <input type="number" class="año" name="año" value="<%= libro.año %>" required min="1000" max="2024">
             </div>
             <div>
                 <label>ISBN:</label>
-                <input type="text" name="isbn" value="<%= libro.isbn %>" required pattern="\d{13}" title="Ingrese un ISBN válido de 13 dígitos">
+                <input type="text" class="isbn" name="isbn" value="<%= libro.isbn %>" required pattern="\d{13}" title="Ingrese un ISBN válido de 13 dígitos">
             </div>
             <div>
                 <label>Cantidad:</label>
-                <input type="number" name="cantidad" value="<%= libro.cantidad %>" required min="0">
+                <input type="number" class="cantidad" name="cantidad" value="<%= libro.cantidad %>" required min="0">
             </div>
             <div>
                 <label>Ubicación:</label>
-                <input type="text" name="ubicacion" value="<%= libro.ubicacion %>" required>
+                <input type="text" class="ubicacion" name="ubicacion" value="<%= libro.ubicacion %>" required>
             </div>
-            <div>
-                <button type="submit" class="boton boton-editar">Actualizar Libro</button>
+            <div style="text-align: right;">
+                <button type="submit" class="boton boton-editar2">Actualizar Libro</button>
                 <a href="/" class="boton boton-eliminar">Cancelar</a>
             </div>
         </form>
